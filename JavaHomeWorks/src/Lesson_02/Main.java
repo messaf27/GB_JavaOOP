@@ -13,17 +13,36 @@ package Lesson_02;
     списку он препятствий не идет.
 */
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Main {
+
+    public static int randomGetInt(int start, int end) {
+//        Random random = new Random();
+        return new Random().nextInt((end - start) + 1) + start;
+    }
     public static void main(String[] args) {
+        // Создаём массив с участниками
+        ArrayList<ActionObject> members = new ArrayList<ActionObject>();
+        for (int i = 0; i < 5; i++) {
+            members.add(new Human(randomGetInt(1, 25), randomGetInt(1, 25)));
+            members.add(new Cat(randomGetInt(1, 25), randomGetInt(1, 25)));
+            members.add(new Robot(randomGetInt(1, 25), randomGetInt(1, 25)));
+        }
 
-        Exercise treadmill1 = new Treadmill();
-        Exercise wall1 = new Wall();
+        // Создаём массив с препятствиями
+        ArrayList<Exercise> obstacles = new ArrayList<Exercise>();
+        for (int i = 0; i < 5; i++) {
+            obstacles.add(new Wall(randomGetInt(3, 18)));
+            obstacles.add(new Treadmill(randomGetInt(1, 36)));
+        }
 
-        ActionObject human1 = new Human();
-        ActionObject cat1 = new Cat();
-        ActionObject robot1 = new Robot();
-
-        robot1.doExercise(treadmill1);
-        cat1.doExercise(wall1);
+        // Проходим каждым участником набор испытаний
+        for (ActionObject objMember: members) {
+            for (Exercise ex: obstacles){
+                objMember.doExercise(ex);
+            }
+        }
     }
 }

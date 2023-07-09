@@ -1,9 +1,7 @@
 package Lesson_02;
 
 public interface ActionObject {
-
-    void jump();
-    void run();
-
+    boolean jump(int height);
+    boolean run(int distance);
     void doExercise(Exercise exercise);
 }
