@@ -9,10 +9,8 @@ public class Answer {
 
     @Override
     public String toString() {
-        return "Answer{" +
-                "bulls=" + bulls +
-                ", cows=" + cows +
-                '}';
+        return String.format("Быков = %d, Коров = %d \r\n",
+                this.bulls, this.cows);
     }
 
     public Answer(int bulls, int cows) {

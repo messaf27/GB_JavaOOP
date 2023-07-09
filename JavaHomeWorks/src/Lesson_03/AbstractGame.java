@@ -13,27 +13,20 @@ public abstract class AbstractGame implements Game {
         this.gameStatus = GameStatus.INIT;
     }
 
-//    public AbstractGame(int wordLen, int attemptsNum, String wordGame) {
-//        this.wordLen = wordLen;
-//        this.attemptsNum = attemptsNum;
-//        this.wordGame = wordGame;
-//        this.gameStatus = GameStatus.INIT;
-//    }
-
     @Override
     public void start(int wordLen, int attemptsNum) {
         this.gameStatus = GameStatus.PLAY;
         this.wordLen = wordLen;
         this.attemptsNum = attemptsNum;
         this.wordGame = generateWord();
-        System.out.println("Generate word: "+ this.wordGame);
+        System.out.println("Загадали слово: "+ this.wordGame);
     }
-
+    public abstract List<String> generateCharList();
     private String generateWord() {
         Random random = new Random();
         StringBuilder sb = new StringBuilder();
         List<String> strList = generateCharList();
-        // Todo:  word generator
+
         for (int i = 0; i < this.wordLen; i++) {
             int idx = random.nextInt(strList.size());
             sb.append(strList.get(idx));
@@ -41,8 +34,6 @@ public abstract class AbstractGame implements Game {
         }
         return  sb.toString();
     }
-
-    public abstract List<String> generateCharList();
 
     @Override
     public Answer inputValue(String value) {
@@ -76,5 +67,9 @@ public abstract class AbstractGame implements Game {
     @Override
     public GameStatus getGameStatus() {
         return this.gameStatus;
+    }
+
+    public int getCurrentAttempt() {
+        return this.attemptsNum;
     }
 }
