@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LRUCache <E>{
-
     ArrayList<E> listE;
     int size;
 
@@ -14,17 +13,21 @@ public class LRUCache <E>{
     }
 
     public void addElement(E employee) {
-        listE.add(employee);
+        if(this.listE.size() > this.size){
+            listE.remove(0);
+        }
+        this.listE.add(employee);
     }
 
     public E getElement(int index){
-        if(index >= listE.size())
+        if(index >= this.listE.size())
             return null;
 
         return this.listE.get(index);
     }
 
     public List<E> getAllElements() {
-        return listE;
+        return this.listE;
     }
+
 }

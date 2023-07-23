@@ -31,6 +31,7 @@ public class Main {
 
         for (Employee employee : employees) {
             lruCache.addElement(employee);
+            System.out.println("lruCache.getAllElements() = " + lruCache.getAllElements());
         }
 
     }
