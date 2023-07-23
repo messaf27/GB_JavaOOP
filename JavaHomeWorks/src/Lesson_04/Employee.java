@@ -11,4 +11,9 @@ public class Employee {
         this.salary = salary;
         this.jobTitle = jobTitle;
     }
+
+    @Override
+    public String toString(){
+        return String.format("%s, %.2f, %s", fio, salary, jobTitle);
+    }
 }

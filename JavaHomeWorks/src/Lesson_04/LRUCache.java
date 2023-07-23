@@ -1,5 +1,7 @@
 package Lesson_04;
 
+import jdk.jfr.DataAmount;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,5 +31,6 @@ public class LRUCache <E>{
     public List<E> getAllElements() {
         return this.listE;
     }
+
 
 }

@@ -25,7 +25,7 @@ public class Main {
         LRUCache<Employee> lruCache = new LRUCache<Employee>(4);
         List<Employee> employees = new ArrayList<>();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 6; i++) {
             employees.add(new Employee("Ivanov Ivan Ivanovich " + i, i * 100, "rab " + i));
         }
 
@@ -33,6 +33,5 @@ public class Main {
             lruCache.addElement(employee);
             System.out.println("lruCache.getAllElements() = " + lruCache.getAllElements());
         }
-
     }
 }
