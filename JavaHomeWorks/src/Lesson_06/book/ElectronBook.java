@@ -15,8 +15,9 @@ public class ElectronBook extends Book {
     @Override
     public String toString() {
         return "ElectronBook{" +
+                super.toString() +
                 "format='" + format + '\'' +
                 ", size=" + size +
-                '}';
+                "} ";
     }
 }

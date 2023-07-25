@@ -2,10 +2,10 @@ package Lesson_06.formatter;
 
 import Lesson_06.book.ElectronBook;
 
-public class FormatterHTML implements Formatter{
+public class JSONFormatter implements Formatter {
     @Override
     public void toFormat(ElectronBook book) {
-        System.out.printf("Книга %s (автор: %s, год: %d) переведена в формат HTML",
+        System.out.printf("Книга %s (автор: %s, год: %d) переведена в формат JSON",
                 book.getName(), book.getAuthor(), book.getYear());
     }
 }

@@ -4,10 +4,11 @@ import Lesson_06.book.Book;
 import Lesson_06.book.ElectronBook;
 import Lesson_06.book.GenreBook;
 import Lesson_06.book.Library;
+import Lesson_06.formatter.Formatter;
+import Lesson_06.formatter.HTMLFormatter;
+import Lesson_06.formatter.JSONFormatter;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,5 +23,10 @@ public class Main {
                 new ElectronBook("Name8", "BookAuthor3", new GenreBook("драмма"),2003, "JSON", 1024),
                 new ElectronBook("Name9", "BookAuthor1", new GenreBook("триллер"),2003, "HTML", 2048)
         ));
+
+        System.out.println("library.booksSearchByAuthor(\"BookAuthor1\") = " + library.booksSearchByAuthor("BookAuthor1"));
+        Formatter jsonFormatter = new JSONFormatter();
+        jsonFormatter.toFormat((ElectronBook) library.getBooks().get(7));
+        jsonFormatter.toFormat((ElectronBook) library.getBooks().get(5));
     }
 }

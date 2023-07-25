@@ -28,4 +28,8 @@ public class Library implements Searchable {
                 "books=" + books +
                 '}';
     }
+
+    public List<Book> getBooks() {
+        return books;
+    }
 }
