@@ -1,10 +1,10 @@
-package Lesson_05.lct.Ex002Phonebook.UI;
+package Lesson_05.lection.Ex002Phonebook.UI;
 
 import java.util.Scanner;
 
-import Lesson_05.lct.Ex002Phonebook.Config;
-import Lesson_05.lct.Ex002Phonebook.Core.MVP.Presenter;
-import Lesson_05.lct.Ex002Phonebook.Core.MVP.View;
+import Lesson_05.lection.Ex002Phonebook.Core.Config;
+import Lesson_05.lection.Ex002Phonebook.Core.MVP.Presenter;
+import Lesson_05.lection.Ex002Phonebook.Core.MVP.View;
 
 public class App {
     public static void ButtonClick() {

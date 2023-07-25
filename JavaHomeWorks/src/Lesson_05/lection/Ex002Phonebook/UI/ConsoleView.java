@@ -1,8 +1,8 @@
-package Lesson_05.lct.Ex002Phonebook.UI;
+package Lesson_05.lection.Ex002Phonebook.UI;
 
 import java.util.Scanner;
 
-import Lesson_05.lct.Ex002Phonebook.Core.MVP.View;
+import Lesson_05.lection.Ex002Phonebook.Core.MVP.View;
 
 public class ConsoleView implements View {
     Scanner in;
