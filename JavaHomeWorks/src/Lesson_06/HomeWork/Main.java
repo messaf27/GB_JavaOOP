@@ -16,5 +16,14 @@ public class Main {
     public static void main(String[] args) {
         Contact contact = new Contact("Egor", "Orlenok", "+79143701845");
         System.out.println("contact = " + contact);
+
+        PhoneBook phoneBook = new PhoneBook("pb.txt");
+        phoneBook.addContact(new Contact("Egor", "Orlenok", "+79143701845"));
+        phoneBook.addContact(new Contact("Ivan", "Petrov", "+79143708945"));
+        phoneBook.addContact(new Contact("Petr", "Kuzneysov", "+7911144452"));
+        phoneBook.addContact(new Contact("Konstantin", "Smirnov", "+79993631825"));
+        phoneBook.addContact(new Contact("Roman", "Sutulov", "+79143782565"));
+
+        System.out.println(phoneBook);
     }
 }
