@@ -1,5 +1,7 @@
 package Lesson_06.book;
 
+import Lesson_06.genre.GenreBook;
+
 public class Book {
     private String name;
     private String author;

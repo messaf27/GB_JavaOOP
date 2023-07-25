@@ -2,10 +2,9 @@ package Lesson_06;
 
 import Lesson_06.book.Book;
 import Lesson_06.book.ElectronBook;
-import Lesson_06.book.GenreBook;
+import Lesson_06.genre.GenreBook;
 import Lesson_06.book.Library;
 import Lesson_06.formatter.Formatter;
-import Lesson_06.formatter.HTMLFormatter;
 import Lesson_06.formatter.JSONFormatter;
 
 import java.util.Arrays;
@@ -24,9 +23,15 @@ public class Main {
                 new ElectronBook("Name9", "BookAuthor1", new GenreBook("триллер"),2003, "HTML", 2048)
         ));
 
-        System.out.println("library.booksSearchByAuthor(\"BookAuthor1\") = " + library.booksSearchByAuthor("BookAuthor1"));
+//        System.out.println("library.booksSearchByAuthor(\"BookAuthor1\") = " + library.booksSearchByAuthor("BookAuthor1"));
+        String author = "BookAuthor2";
+        System.out.println("Search book by author: " + author);
+        for (Book searchedAuthor : library.booksSearchByAuthor("BookAuthor2")) {
+            System.out.println(searchedAuthor);
+        }
+
         Formatter jsonFormatter = new JSONFormatter();
         jsonFormatter.toFormat((ElectronBook) library.getBooks().get(7));
-        jsonFormatter.toFormat((ElectronBook) library.getBooks().get(5));
+        jsonFormatter.toFormat((ElectronBook) library.getBooks().get(8));
     }
 }

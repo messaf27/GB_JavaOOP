@@ -1,5 +1,7 @@
 package Lesson_06.book;
 
+import Lesson_06.search.Searchable;
+
 import java.util.ArrayList;
 import java.util.List;
 

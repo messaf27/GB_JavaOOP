@@ -1,4 +1,6 @@
-package Lesson_06.book;
+package Lesson_06.genre;
+
+import Lesson_06.genre.Genre;
 
 public class GenreBook implements Genre {
     private String genreName;

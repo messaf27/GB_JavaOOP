@@ -1,4 +1,4 @@
-package Lesson_06.book;
+package Lesson_06.search;
 
 import Lesson_06.book.Book;
 

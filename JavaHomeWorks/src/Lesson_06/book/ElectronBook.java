@@ -1,6 +1,6 @@
 package Lesson_06.book;
 
-import Lesson_06.book.Book;
+import Lesson_06.genre.GenreBook;
 
 public class ElectronBook extends Book {
     private String format;
@@ -14,10 +14,20 @@ public class ElectronBook extends Book {
 
     @Override
     public String toString() {
-        return "ElectronBook{" +
-                super.toString() +
+        return "ElectronBook {" +
+                "name='" + super.getName() + '\'' +
+                ", author='" + super.getAuthor() + '\'' +
+                ", year=" + super.getYear() +
                 "format='" + format + '\'' +
                 ", size=" + size +
                 "} ";
+    }
+
+    public String getFormat() {
+        return format;
+    }
+
+    public Integer getSize() {
+        return size;
     }
 }
