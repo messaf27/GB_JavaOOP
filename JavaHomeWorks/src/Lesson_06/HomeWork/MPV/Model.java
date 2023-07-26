@@ -15,16 +15,15 @@ public class Model {
         return currentIndex;
     }
 
-    public boolean open(){
-        return false;
-    }
-
     public void setCurrentIndex(int currentIndex) {
         this.currentIndex = currentIndex;
     }
 
     public Contact getCurrentContact() {
         return currentBook.getContact(currentIndex);
+    }
+    public String getLastUpdateDateTime() {
+        return currentBook.getDateTimeLastUpdate();
     }
 
 

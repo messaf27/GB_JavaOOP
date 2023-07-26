@@ -26,15 +26,15 @@ public class Main {
 //        System.out.println("contact = " + contact);
 
 //        InterfacePhoneBook phoneBookFromDataBase = new PhoneBookDataBase("https://phonebook.ru/pb.db");
-        InterfacePhoneBook phoneBookFromFile = new PhoneBookFile("phonebook.txt");
-
-        phoneBookFromFile.addContact(new Contact("Egor", "Orlenok", "+79143701845"));
-        phoneBookFromFile.addContact(new Contact("Ivan", "Petrov", "+79143708945"));
-        phoneBookFromFile.addContact(new Contact("Petr", "Kuzneysov", "+7911144452"));
-        phoneBookFromFile.addContact(new Contact("Konstantin", "Smirnov", "+79993631825"));
-        phoneBookFromFile.addContact(new Contact("Roman", "Sutulov", "+79143782565"));
-
-        System.out.println(phoneBookFromFile);
+//        InterfacePhoneBook phoneBookFromFile = new PhoneBookFile("phonebook.txt");
+//
+//        phoneBookFromFile.addContact(new Contact("Egor", "Orlenok", "+79143701845"));
+//        phoneBookFromFile.addContact(new Contact("Ivan", "Petrov", "+79143708945"));
+//        phoneBookFromFile.addContact(new Contact("Petr", "Kuzneysov", "+7911144452"));
+//        phoneBookFromFile.addContact(new Contact("Konstantin", "Smirnov", "+79993631825"));
+//        phoneBookFromFile.addContact(new Contact("Roman", "Sutulov", "+79143782565"));
+//
+//        System.out.println(phoneBookFromFile);
 //
 //        System.out.println("phoneBookFromFile.removeContact(5) = " + phoneBookFromFile.removeContact(5));
 //        System.out.println("phoneBookFromFile.removeContact(7) = " + phoneBookFromFile.removeContact(7));
@@ -42,10 +42,12 @@ public class Main {
 //
 //        System.out.println(phoneBookFromFile);
 
-//        Presenter presenter = new Presenter(
-//                new Model(
-//                        new PhoneBookFile("phonebook.txt")),
-//                new ConcoleView()
-//        );
+        Presenter presenter = new Presenter(
+                new Model(
+                        new PhoneBookFile("phonebook.txt")),
+                new ConcoleView()
+        );
+
+        presenter.mainMenu();
     }
 }

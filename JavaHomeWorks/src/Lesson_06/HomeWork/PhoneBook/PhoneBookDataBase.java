@@ -13,6 +13,11 @@ public class PhoneBookDataBase implements InterfacePhoneBook {
         this.dbUrlPath = dbUrlPath;
     }
 
+    @Override
+    public String getDateTimeLastUpdate() {
+        return null;
+    }
+
     // Далее все механизмы описывают работу с контактами в базе данных через сеть. (гипотетически)
     @Override
     public void addContact(Contact contact) {

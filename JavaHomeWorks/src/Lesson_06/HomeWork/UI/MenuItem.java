@@ -1,14 +1,18 @@
 package Lesson_06.HomeWork.UI;
 
 public class MenuItem {
-    private String name;
-    static int index;
+    private String itemName;
+    private int index = 0;
 
-    public MenuItem(String name) {
-        this.name = name;
-        this.index = 1;
+    public MenuItem(String name, int index) {
+        this.index = index;
+        this.itemName = name;
     }
     public int getIndex() {
         return index;
+    }
+
+    public String getName() {
+        return itemName;
     }
 }

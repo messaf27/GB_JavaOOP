@@ -1,12 +1,15 @@
 package Lesson_06.HomeWork.MPV;
 
-public interface View {
-    String getFirstName();
-    void setFirstName(String value);
-    String getLastName();
-    void setLastName(String value);
-    String getDescription();
-    void setDescription(String value);
+import Lesson_06.HomeWork.UI.Menu;
 
-    void menu();
+public interface View {
+//    String getFirstName();
+//    void setFirstName(String value);
+//    String getLastName();
+//    void setLastName(String value);
+//    String getDescription();
+//    void setDescription(String value);
+
+    void displayUserMenu(String title, Menu menu);
+    int getSelectedMenuItem();
 }

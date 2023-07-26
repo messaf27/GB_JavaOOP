@@ -7,14 +7,26 @@ public class Menu {
     private List<MenuItem> menuList;
 
     public Menu() {
-        menuList = new ArrayList<>();
+        this.menuList = new ArrayList<>();
     }
 
-    public int addMenuItem(String itemName)
-    {
-        MenuItem item = new MenuItem(itemName);
+    public Menu(List<MenuItem> items) {
+        this.menuList = items;
+    }
+
+    public void addMenuItem(MenuItem item) {
         this.menuList.add(item);
-        return  item.getIndex();
     }
 
+    public int getNumItems() {
+        return this.menuList.size();
+    }
+
+    public MenuItem getItemFromIndex(int index) {
+        return this.menuList.get(index);
+    }
+
+    public String getItemNameFromIndex(int index) {
+        return this.menuList.get(index).getName();
+    }
 }

@@ -5,58 +5,39 @@ import Lesson_06.HomeWork.MPV.View;
 import java.util.Scanner;
 
 public class ConcoleView implements View {
-
     private Scanner in;
-    private Menu menu;
+//    private Menu menu;
     public ConcoleView() {
         this.in = new Scanner(System.in);
-        this.menu = new Menu();
-        menu.addMenuItem("Вывести весь список контактов");
-        menu.addMenuItem("Вывести весь список контактов");
+    }
+    @Override
+    public void displayUserMenu(String title, Menu menu) {
+
+        StringBuilder buildMenu = new StringBuilder("\n");
+        buildMenu.append("=============================================================\n");
+        buildMenu.append(String.format("%s\n", title));
+        buildMenu.append("-------------------------------------------------------------\n");
+        for (int i = 0; i < menu.getNumItems(); i++) {
+            buildMenu.append(String.format("[%d] %s\n", menu.getItemFromIndex(i).getIndex(), menu.getItemNameFromIndex(i)));
+        }
+        buildMenu.append("=============================================================\n");
+        buildMenu.append(String.format("Выберете пункт меню от %d до %d: ", 1, menu.getNumItems()));
+//        buildMenu.append("-------------------------------------------------------------\n");
+
+//        "=============================================================\n"
+        System.out.print(buildMenu);
     }
 
     @Override
-    public String getFirstName() {
-        System.out.printf("FirstName: ");
-        return in.nextLine();
-    }
+    public int getSelectedMenuItem() {
+        int selectIndex = 0;
+        selectIndex = in.nextInt();
 
-    @Override
-    public void setFirstName(String value) {
-        System.out.printf("FirstName: %s\n", value);
-    }
+        // TODO: Сделать проверку введеных данных
+        //if(...)
 
-    @Override
-    public String getLastName() {
-        System.out.printf("LastName: ");
-        return in.nextLine();
-    }
+        System.out.println("-------------------------------------------------------------\n");
 
-    @Override
-    public void setLastName(String value) {
-        System.out.printf("LastName: %s\n", value);
-    }
-
-    @Override
-    public String getDescription() {
-        System.out.printf("Description: ");
-        return in.nextLine();
-    }
-
-    @Override
-    public void setDescription(String value) {
-        System.out.printf("Description: %s\n", value);
-    }
-
-    @Override
-    public void menu() {
-//        System.out.printf("\n" +
-//                "=============================================================\n" +
-//                "Телефонная книга вер.: %d, дата последнего обновления: %s" +
-//                "-------------------------------------------------------------\n" +
-//                "=============================================================\n" +
-//                "",
-//                );
-        System.out.println("Сдесь будет меню!!!");
+        return selectIndex;
     }
 }

@@ -3,24 +3,44 @@ package Lesson_06.HomeWork.PhoneBook;
 import Lesson_06.HomeWork.ContactTypes.Contact;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDate;
 
 public class PhoneBookFile implements InterfacePhoneBook {
     private String filePath;
+    private String dateTimeLastUpdate;
     private List<Contact> contactList;
 
     public PhoneBookFile(String filePath) {
         this.filePath = filePath;
         this.contactList = new ArrayList<>();
+        this.dateTimeLastUpdate = getDateTimeNow();
         this.readFile();
     }
 
-    public void readFile() {
+    private String getDateTimeNow(){
+        LocalDateTime now = LocalDateTime.now();
+        return String.format("%02d:%02d:%02d %02d.%02d.%d",
+                now.getHour(),
+                now.getMinute(),
+                now.getSecond(),
+                now.getDayOfMonth(),
+                now.getMonthValue(),
+                now.getYear());
+    }
+
+    private void readFile() {
         try {
             File file = new File(this.filePath);
             FileReader fr = new FileReader(file);
             BufferedReader reader = new BufferedReader(fr);
+            this.dateTimeLastUpdate = reader.readLine();
+
+            if(this.dateTimeLastUpdate == null)
+                this.dateTimeLastUpdate = getDateTimeNow();
+
             String frstName = reader.readLine();
             while (frstName != null) {
                 String lstName = reader.readLine();
@@ -35,14 +55,12 @@ public class PhoneBookFile implements InterfacePhoneBook {
         }
     }
 
-    public void saveFile() {
+    private void saveFile() {
         try (FileWriter writer = new FileWriter(this.filePath, false)) {
-//                for (int i = 0; i < this.contactList.size(); i++) {
-//                    Contact contact = this.contactList.get(i);
-//                    writer.append(String.format("%s\n", contact.getFirstName()));
-//                    writer.append(String.format("%s\n", contact.getLastName()));
-//                    writer.append(String.format("%s\n", contact.getTelNumber()));
-//                }
+
+            // Write first in file date and time last modified
+            writer.append(String.format("%s\n", getDateTimeNow()));
+
             for (Contact contact : this.contactList) {
                 writer.append(String.format("%s\n", contact.getFirstName()));
                 writer.append(String.format("%s\n", contact.getLastName()));
@@ -54,6 +72,12 @@ public class PhoneBookFile implements InterfacePhoneBook {
             System.out.println(ex.getMessage());
         }
     }
+
+    @Override
+    public String getDateTimeLastUpdate() {
+        return this.dateTimeLastUpdate;
+ }
+
     @Override
     public void addContact(Contact contact){
             contactList.add(contact);
@@ -91,7 +115,7 @@ public class PhoneBookFile implements InterfacePhoneBook {
         StringBuilder result = null;
         int counter = 1;
 
-        result = new StringBuilder("Phone book list:\n");
+        result = new StringBuilder();
         for (Contact contact : contactList) {
             result.append(String.format("%d) %s",
                     counter, contact));
