@@ -12,7 +12,6 @@ package Lesson_06.HomeWork;
     * в файле на одной строке хранится одна часть записи, пустая строка - разделитель
 */
 
-
 import Lesson_06.HomeWork.phoneBook.InterfacePhoneBook;
 import Lesson_06.HomeWork.phoneBook.PhoneBookDataBase;
 import Lesson_06.HomeWork.phoneBook.PhoneBookFile;

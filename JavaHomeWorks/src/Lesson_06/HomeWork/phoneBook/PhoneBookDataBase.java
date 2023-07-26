@@ -1,6 +1,6 @@
 package Lesson_06.HomeWork.phoneBook;
 
-import Lesson_06.HomeWork.Contact;
+import Lesson_06.HomeWork.contact.Contact;
 
 import java.util.List;
 

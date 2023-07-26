@@ -1,11 +1,10 @@
 package Lesson_06.HomeWork.phoneBook;
 
-import Lesson_06.HomeWork.Contact;
+import Lesson_06.HomeWork.contact.Contact;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.SortedMap;
 
 public class PhoneBookFile implements InterfacePhoneBook {
 

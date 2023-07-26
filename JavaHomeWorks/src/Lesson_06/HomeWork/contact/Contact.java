@@ -1,4 +1,4 @@
-package Lesson_06.HomeWork;
+package Lesson_06.HomeWork.contact;
 
 import java.util.Objects;
 
