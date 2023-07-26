@@ -1,6 +1,6 @@
-package Lesson_06.HomeWork.phoneBook;
+package Lesson_06.HomeWork.PhoneBook;
 
-import Lesson_06.HomeWork.contact.Contact;
+import Lesson_06.HomeWork.Contact.Contact;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class PhoneBookFile implements InterfacePhoneBook {
         this.loadFile();
     }
 
-    private void loadFile(){
+    private void loadFile() {
         try {
             File file = new File(this.filePath);
             FileReader fr = new FileReader(file);
