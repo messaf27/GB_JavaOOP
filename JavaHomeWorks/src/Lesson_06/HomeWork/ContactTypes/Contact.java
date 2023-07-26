@@ -1,8 +1,8 @@
-package Lesson_06.HomeWork.Contact;
+package Lesson_06.HomeWork.ContactTypes;
 
 import java.util.Objects;
 
-public class Contact implements Comparable<Contact>{
+public class Contact {
     private static int id = 0;
     private String firstName;
     private String lastName;
@@ -38,16 +38,5 @@ public class Contact implements Comparable<Contact>{
     public String toString() {
         return String.format("[ID:%04d] %s %s, %s\n",
                 this.uniqId, this.firstName, this.lastName, this.telNumber);
-    }
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Contact contact = (Contact) o;
-        return Objects.equals(firstName, contact.firstName) && Objects.equals(lastName, contact.lastName) && Objects.equals(telNumber, contact.telNumber);
-    }
-    @Override
-    public int compareTo(Contact o) {
-        return 0;
     }
 }

@@ -1,6 +1,6 @@
 package Lesson_06.HomeWork.MPV;
 
-import Lesson_06.HomeWork.Contact.Contact;
+import Lesson_06.HomeWork.ContactTypes.Contact;
 import Lesson_06.HomeWork.PhoneBook.InterfacePhoneBook;
 
 public class Model {
@@ -24,7 +24,7 @@ public class Model {
     }
 
     public Contact getCurrentContact() {
-        return currentBook.getCotact(currentIndex);
+        return currentBook.getContact(currentIndex);
     }
 
 

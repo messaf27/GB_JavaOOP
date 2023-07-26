@@ -1,6 +1,6 @@
 package Lesson_06.HomeWork.PhoneBook;
 
-import Lesson_06.HomeWork.Contact.Contact;
+import Lesson_06.HomeWork.ContactTypes.Contact;
 
 import java.util.List;
 
@@ -15,27 +15,31 @@ public class PhoneBookDataBase implements InterfacePhoneBook {
 
     // Далее все механизмы описывают работу с контактами в базе данных через сеть. (гипотетически)
     @Override
-    public boolean addContact(Contact contact) {
-        return false;
+    public void addContact(Contact contact) {
+        // TODO: Добавить реализацию метода
     }
 
     @Override
-    public Contact getCotact(int index) {
+    public Contact getContact(int index) {
+        // TODO: Добавить реализацию метода
         return null;
     }
 
     @Override
     public boolean removeContact(int index) {
+        // TODO: Добавить реализацию метода
         return false;
     }
 
     @Override
     public List<Contact> getContactList() {
+        // TODO: Добавить реализацию метода
         return null;
     }
 
     @Override
     public int getNumOfContacts() {
+        // TODO: Добавить реализацию метода
         return 0;
     }
 }

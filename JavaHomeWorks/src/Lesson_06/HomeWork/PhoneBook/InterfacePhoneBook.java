@@ -1,12 +1,12 @@
 package Lesson_06.HomeWork.PhoneBook;
 
-import Lesson_06.HomeWork.Contact.Contact;
+import Lesson_06.HomeWork.ContactTypes.Contact;
 
 import java.util.List;
 
 public interface InterfacePhoneBook {
-    boolean addContact(Contact contact);
-    Contact getCotact(int index);
+    void addContact(Contact contact);
+    Contact getContact(int index);
     boolean removeContact(int index);
     List<Contact> getContactList();
     int getNumOfContacts();
