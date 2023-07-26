@@ -29,7 +29,10 @@ public class Presenter {
                 System.out.println(model.currentBook);
             }
             case 2 -> {
-                System.out.println("Действие пункта еще не готово...");
+                System.out.println("Действие пункта 2 еще не готово...");
+            }
+            case 3 -> {
+                System.out.println("Действие пункта 3 еще не готово...");
             }
         }
     }
