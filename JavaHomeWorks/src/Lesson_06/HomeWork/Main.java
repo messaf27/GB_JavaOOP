@@ -12,18 +12,31 @@ package Lesson_06.HomeWork;
     * в файле на одной строке хранится одна часть записи, пустая строка - разделитель
 */
 
+
+import Lesson_06.HomeWork.phoneBook.InterfacePhoneBook;
+import Lesson_06.HomeWork.phoneBook.PhoneBookDataBase;
+import Lesson_06.HomeWork.phoneBook.PhoneBookFile;
+
 public class Main {
     public static void main(String[] args) {
-        Contact contact = new Contact("Egor", "Orlenok", "+79143701845");
-        System.out.println("contact = " + contact);
+//        Contact contact = new Contact("Egor", "Orlenok", "+79143701845");
+//        System.out.println("contact = " + contact);
 
-        PhoneBook phoneBook = new PhoneBook("pb.txt");
-        phoneBook.addContact(new Contact("Egor", "Orlenok", "+79143701845"));
-        phoneBook.addContact(new Contact("Ivan", "Petrov", "+79143708945"));
-        phoneBook.addContact(new Contact("Petr", "Kuzneysov", "+7911144452"));
-        phoneBook.addContact(new Contact("Konstantin", "Smirnov", "+79993631825"));
-        phoneBook.addContact(new Contact("Roman", "Sutulov", "+79143782565"));
+        InterfacePhoneBook phoneBookFromDataBase = new PhoneBookDataBase("https://phonebook.ru/pb.db");
+        InterfacePhoneBook phoneBookFromFile = new PhoneBookFile("phonebook.txt");
 
-        System.out.println(phoneBook);
+//        phoneBookFromFile.addContact(new Contact("Egor", "Orlenok", "+79143701845"));
+//        phoneBookFromFile.addContact(new Contact("Ivan", "Petrov", "+79143708945"));
+//        phoneBookFromFile.addContact(new Contact("Petr", "Kuzneysov", "+7911144452"));
+//        phoneBookFromFile.addContact(new Contact("Konstantin", "Smirnov", "+79993631825"));
+//        phoneBookFromFile.addContact(new Contact("Roman", "Sutulov", "+79143782565"));
+
+        System.out.println(phoneBookFromFile);
+
+        System.out.println("phoneBookFromFile.removeContact(5) = " + phoneBookFromFile.removeContact(5));
+        System.out.println("phoneBookFromFile.removeContact(7) = " + phoneBookFromFile.removeContact(7));
+        System.out.println("phoneBookFromFile.removeContact(15) = " + phoneBookFromFile.removeContact(15));
+
+        System.out.println(phoneBookFromFile);
     }
 }
