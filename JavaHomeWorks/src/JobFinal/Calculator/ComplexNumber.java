@@ -1,4 +1,4 @@
-package JobFinal;
+package JobFinal.Calculator;
 
 public class ComplexNumber {
     private double realPart;

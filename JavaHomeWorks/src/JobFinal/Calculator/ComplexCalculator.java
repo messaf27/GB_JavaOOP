@@ -1,6 +1,6 @@
-package JobFinal;
+package JobFinal.Calculator;
 
-public class ComplexCalculator implements Calculator{
+public class ComplexCalculator implements Calculator<ComplexNumber> {
     public ComplexCalculator() {
     }
 
