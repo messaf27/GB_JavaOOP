@@ -63,8 +63,8 @@ public class Presenter {
         }
     }
 
-    public void mainMenuProcess(){
-
+    public void run(){
+        mainMenu();
     }
 
     public void exit(){
