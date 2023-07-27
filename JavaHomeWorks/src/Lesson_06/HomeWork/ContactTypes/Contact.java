@@ -3,23 +3,16 @@ package Lesson_06.HomeWork.ContactTypes;
 import java.util.Objects;
 
 public class Contact {
-    private static int id = 0;
     private String firstName;
     private String lastName;
     private String telNumber;
     private Integer uniqId;
 
     public Contact(String firstName, String lastName, String telNumber) {
-        id++;
         this.firstName = firstName;
         this.lastName = lastName;
         this.telNumber = telNumber;
-        this.uniqId = id;
-
-    }
-
-    public static int getId() {
-        return id;
+        this.uniqId = new UniqID(2048).creteId();
     }
 
     public String getFirstName() {

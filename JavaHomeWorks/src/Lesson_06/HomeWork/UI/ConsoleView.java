@@ -4,15 +4,15 @@ import Lesson_06.HomeWork.MPV.View;
 
 import java.util.Scanner;
 
-public class ConcoleView implements View {
+public class ConsoleView implements View {
     private Scanner in;
-//    private Menu menu;
-    public ConcoleView() {
+
+    public ConsoleView() {
         this.in = new Scanner(System.in);
     }
+
     @Override
     public void displayUserMenu(String title, Menu menu) {
-
         StringBuilder buildMenu = new StringBuilder("\n");
         buildMenu.append("=============================================================\n");
         buildMenu.append(String.format("%s\n", title));
@@ -22,9 +22,7 @@ public class ConcoleView implements View {
         }
         buildMenu.append("=============================================================\n");
         buildMenu.append(String.format("Выберете пункт меню от %d до %d: ", 1, menu.getNumItems()));
-//        buildMenu.append("-------------------------------------------------------------\n");
 
-//        "=============================================================\n"
         System.out.print(buildMenu);
     }
 

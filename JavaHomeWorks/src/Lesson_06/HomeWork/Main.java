@@ -15,10 +15,10 @@ package Lesson_06.HomeWork;
 import Lesson_06.HomeWork.ContactTypes.Contact;
 import Lesson_06.HomeWork.MPV.Model;
 import Lesson_06.HomeWork.MPV.Presenter;
-import Lesson_06.HomeWork.MPV.View;
 import Lesson_06.HomeWork.PhoneBook.InterfacePhoneBook;
+import Lesson_06.HomeWork.PhoneBook.PhoneBookDataBase;
 import Lesson_06.HomeWork.PhoneBook.PhoneBookFile;
-import Lesson_06.HomeWork.UI.ConcoleView;
+import Lesson_06.HomeWork.UI.ConsoleView;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class Main {
 //        phoneBookFromFile.addContact(new Contact("Roman", "Sutulov", "+79143782565"));
 //
 //        System.out.println(phoneBookFromFile);
-//
+
 //        System.out.println("phoneBookFromFile.removeContact(5) = " + phoneBookFromFile.removeContact(5));
 //        System.out.println("phoneBookFromFile.removeContact(7) = " + phoneBookFromFile.removeContact(7));
 //        System.out.println("phoneBookFromFile.removeContact(15) = " + phoneBookFromFile.removeContact(15));
@@ -45,9 +45,8 @@ public class Main {
         Presenter presenter = new Presenter(
                 new Model(
                         new PhoneBookFile("phonebook.txt")),
-                new ConcoleView()
+                new ConsoleView()
         );
-
         presenter.mainMenu();
     }
 }
