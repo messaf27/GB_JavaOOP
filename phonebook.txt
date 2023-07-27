@@ -1,10 +1,4 @@
-11:44:53 27.07.2023
-Egor
-Orlenok
-+79143701845
-Ivan
-Petrov
-+79143708945
+16:37:24 27.07.2023
 Petr
 Kuzneysov
 +7911144452
@@ -32,9 +26,6 @@ Sutulov
 Egor
 Orlenok
 +79143701845
-Ivan
-Petrov
-+79143708945
 Petr
 Kuzneysov
 +7911144452
@@ -44,3 +35,12 @@ Smirnov
 Roman
 Sutulov
 +79143782565
+Vasya
+Pupkin
+576489
+Alexey
+Khudyakov
++79254469988
+Gosha
+Polezhaev
++78882336655

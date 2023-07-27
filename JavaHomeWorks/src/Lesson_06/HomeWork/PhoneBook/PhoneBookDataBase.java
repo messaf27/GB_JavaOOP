@@ -14,6 +14,16 @@ public class PhoneBookDataBase implements InterfacePhoneBook {
     }
 
     @Override
+    public void open() {
+
+    }
+
+    @Override
+    public void close() {
+
+    }
+
+    @Override
     public String getDateTimeLastUpdate() {
         return null;
     }

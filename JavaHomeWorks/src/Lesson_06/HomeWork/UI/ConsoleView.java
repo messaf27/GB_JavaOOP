@@ -11,6 +11,42 @@ public class ConsoleView implements View {
         this.in = new Scanner(System.in);
     }
 
+    private int getIntFix(){
+        int result = 0;
+
+        if(in.hasNextInt()){
+            result = in.nextInt();
+        }else{
+            System.out.println("---------------------!!!ВНИМАНИЕ!!!--------------------------");
+            System.out.println("Ошибка ввода, введите число!");
+        }
+        in.nextLine(); // Fix new line symbol
+        return result;
+    }
+    @Override
+    public String getFirstName() {
+        System.out.print("Введите имя: ");
+        return in.nextLine();
+    }
+
+    @Override
+    public String getLastName() {
+        System.out.print("Введите фамилию: ");
+        return in.nextLine();
+    }
+
+    @Override
+    public int getInputIndex(String title) {
+        System.out.print(title);
+        return getIntFix();
+    }
+
+    @Override
+    public String getPhoneNumber() {
+        System.out.printf("Введите номер телефона: ");
+        return in.nextLine();
+    }
+
     @Override
     public void displayUserMenu(String title, Menu menu) {
         StringBuilder buildMenu = new StringBuilder("\n");
@@ -28,14 +64,20 @@ public class ConsoleView implements View {
 
     @Override
     public int getSelectedMenuItem() {
-        int selectIndex = 0;
-        selectIndex = in.nextInt();
-
-        // TODO: Сделать проверку введеных данных
-        //if(...)
-
-        System.out.println("-------------------------------------------------------------\n");
-
+        int selectIndex = getIntFix();
+        System.out.println("-------------------------------------------------------------");
         return selectIndex;
+    }
+
+    @Override
+    public void displayObject(Object o) {
+        System.out.print(o);
+    }
+
+    @Override
+    public void exit() {
+        System.out.println("-------------------------------------------------------------");
+        System.out.println("Выход из приложения.");
+        System.out.println("-------------------------------------------------------------");
     }
 }

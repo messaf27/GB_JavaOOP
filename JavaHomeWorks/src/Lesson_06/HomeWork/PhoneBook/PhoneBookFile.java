@@ -74,6 +74,16 @@ public class PhoneBookFile implements InterfacePhoneBook {
     }
 
     @Override
+    public void open() {
+        this.readFile();
+    }
+
+    @Override
+    public void close() {
+        this.saveFile();
+    }
+
+    @Override
     public String getDateTimeLastUpdate() {
         return this.dateTimeLastUpdate;
  }
