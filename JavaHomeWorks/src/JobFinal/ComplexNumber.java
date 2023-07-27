@@ -1,4 +1,4 @@
-package JobFinal.Calculator;
+package JobFinal;
 
 public class ComplexNumber {
     private double realPart;
@@ -23,5 +23,23 @@ public class ComplexNumber {
 
     public void setImaginaryPart(double imaginaryPart) {
         this.imaginaryPart = imaginaryPart;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        if(realPart < 0){
+            result.append(String.format("(%.1f)", realPart));
+        }else{
+            result.append(String.format("%.1f", realPart));
+        }
+
+        if(imaginaryPart > 0){
+            result.append(String.format("+%.1fi", imaginaryPart));
+        }else{
+            result.append(String.format("%.1fi", imaginaryPart));
+        }
+
+        return result.toString();
     }
 }

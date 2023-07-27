@@ -1,7 +1,15 @@
 package JobFinal.Calculator;
 
+import JobFinal.ComplexNumber;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class ComplexCalculator implements Calculator<ComplexNumber> {
+
+    private Logger logger;
     public ComplexCalculator() {
+        logger = Logger.getLogger("ComplexCalculator");
     }
 
     @Override
@@ -14,8 +22,10 @@ public class ComplexCalculator implements Calculator<ComplexNumber> {
 
         result = new ComplexNumber(realPart, imaginaryPart);
 
-        System.out.println("Add result: " + result.getRealPart() + " + " +
-            result.getImaginaryPart() + "i");
+        logger.log(Level.INFO, "Add result: " + result);
+
+//        System.out.println("Add result: " + result.getRealPart() + " + " +
+//            result.getImaginaryPart() + "i");
 
         return result;
     }
@@ -32,8 +42,10 @@ public class ComplexCalculator implements Calculator<ComplexNumber> {
 
         result = new ComplexNumber(realPart, imaginaryPart);
 
-        System.out.println("Multiply result: " + result.getRealPart() + " + " +
-                result.getImaginaryPart() + "i");
+        logger.log(Level.INFO, "Multiply result: " + result);
+
+//        System.out.println("Multiply result: " + result.getRealPart() + " + " +
+//                result.getImaginaryPart() + "i");
 
         return result;
     }
@@ -53,8 +65,10 @@ public class ComplexCalculator implements Calculator<ComplexNumber> {
 
         result = new ComplexNumber(realPart, imaginaryPart);
 
-        System.out.println("Divide result: " + result.getRealPart() + " + " +
-                result.getImaginaryPart() + "i");
+        logger.log(Level.INFO, "Divide result: " + result);
+
+//        System.out.println("Divide result: " + result.getRealPart() + " + " +
+//                result.getImaginaryPart() + "i");
 
         return result;
     }

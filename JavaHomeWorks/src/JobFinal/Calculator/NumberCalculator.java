@@ -17,4 +17,6 @@ public class NumberCalculator implements Calculator<Number> {
     public Number divide(Number oneNum, Number twoNum) {
         return oneNum.doubleValue() / twoNum.doubleValue();
     }
+
+
 }
