@@ -54,7 +54,8 @@ public class ConsoleView implements View {
         buildMenu.append(String.format("%s\n", title));
         buildMenu.append("-------------------------------------------------------------\n");
         for (int i = 0; i < menu.getNumItems(); i++) {
-            buildMenu.append(String.format("[%d] %s\n", menu.getItemFromIndex(i).getIndex(), menu.getItemNameFromIndex(i)));
+            buildMenu.append(String.format("[%d] %s\n",
+                    menu.getItemFromIndex(i).getIndex(), menu.getItemNameFromIndex(i)));
         }
         buildMenu.append("=============================================================\n");
         buildMenu.append(String.format("Выберете пункт меню от %d до %d: ", 1, menu.getNumItems()));

@@ -2,6 +2,7 @@ package Lesson_06.HomeWork.MPV;
 
 import Lesson_06.HomeWork.UI.Menu;
 
+// Интерфейс Viewer для различных реализаций методов классов
 public interface View {
     String getFirstName();
     String getLastName();
