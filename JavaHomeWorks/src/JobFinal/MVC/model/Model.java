@@ -1,9 +1,7 @@
 package JobFinal.MVC.model;
 
-import JobFinal.calculator.Calculator;
-import JobFinal.calculator.ComplexCalculator;
-import JobFinal.calculator.ComplexNumber;
-import JobFinal.calculator.NumberCalculator;
+import JobFinal.calculator.*;
+import JobFinal.logout.ConsoleLogger;
 
 public class Model {
 //    private Calculator complexCalculator = new ComplexCalculator();
@@ -16,7 +14,11 @@ public class Model {
     }
 
     public Model() {
-        this.calculator = new ComplexCalculator();
+
+//        this.calculator = new ComplexCalculator();
+
+        this.calculator = new CreateLogableCalculator(
+                new ConsoleLogger(), new ComplexCalculator());
     }
 
     public Model(Calculator calculator) {

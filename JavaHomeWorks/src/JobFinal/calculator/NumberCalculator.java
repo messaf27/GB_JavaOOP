@@ -1,6 +1,6 @@
 package JobFinal.calculator;
 
-public class NumberCalculator implements Calculator<Number> {
+public final class NumberCalculator implements Calculator<Number> {
     @Override
     public Number add(Number oneNum, Number twoNum) {
         return oneNum.doubleValue() + twoNum.doubleValue();

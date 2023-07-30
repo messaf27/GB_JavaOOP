@@ -1,7 +1,7 @@
 package JobFinal;
 
-import JobFinal.MVC.controller.Controller;
 import JobFinal.MVC.model.Model;
+import JobFinal.MVC.controller.Controller;
 import JobFinal.MVC.viewer.ConsoleViewer;
 import JobFinal.MVC.viewer.View;
 

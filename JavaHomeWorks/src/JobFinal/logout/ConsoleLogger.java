@@ -5,6 +5,6 @@ public class ConsoleLogger implements LogInterface{
     @Override
     public void log(String logMessage) {
         counter++;
-        System.out.printf("[%d] %s", counter, logMessage);
+        System.out.printf("LOG: [%d] %s\n", counter, logMessage);
     }
 }

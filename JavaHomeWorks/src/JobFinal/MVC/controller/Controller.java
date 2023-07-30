@@ -18,11 +18,6 @@ public class Controller {
         this.model = model;
         this.viewer = viewer;
     }
-
-    private void loopProcess() {
-
-    }
-
     public void run(){
         String titleApp = "Приложение Калькулятор комплексных чмсел 1.0";
 
