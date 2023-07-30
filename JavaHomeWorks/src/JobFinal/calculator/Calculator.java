@@ -1,4 +1,4 @@
-package JobFinal.Calculator;
+package JobFinal.calculator;
 
 //public interface Calculator {
 //    ComplexNumber add(ComplexNumber oneNum, ComplexNumber twoNum);

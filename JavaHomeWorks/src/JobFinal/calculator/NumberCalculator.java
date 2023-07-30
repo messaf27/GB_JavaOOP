@@ -1,6 +1,4 @@
-package JobFinal.Calculator;
-
-import JobFinal.Calculator.Calculator;
+package JobFinal.calculator;
 
 public class NumberCalculator implements Calculator<Number> {
     @Override

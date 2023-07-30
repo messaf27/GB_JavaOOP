@@ -1,6 +1,4 @@
-package JobFinal.Calculator;
-
-import JobFinal.ComplexNumber;
+package JobFinal.calculator;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

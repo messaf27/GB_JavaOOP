@@ -1,8 +1,13 @@
-package JobFinal;
+package JobFinal.calculator;
 
 public class ComplexNumber {
     private double realPart;
     private double imaginaryPart;
+
+    public ComplexNumber() {
+        this.realPart = 0;
+        this.imaginaryPart = 0;
+    }
 
     public ComplexNumber(double realPart, double imaginaryPart) {
         this.realPart = realPart;
