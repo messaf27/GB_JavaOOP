@@ -14,7 +14,7 @@ import Lesson_06.HomeWork.UI.ConsoleView;
 
 public class Main {
     public static void main(String[] args) {
-        // Иницмиализация модели MPV
+        /* Иницмиализация модели MPV */
         Presenter presenter = new Presenter(
                 new Model(new PhoneBookFile("phonebook.txt")),
                 new ConsoleView()
